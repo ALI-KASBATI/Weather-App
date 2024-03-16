@@ -1,0 +1,276 @@
+    /* ------------------------------ Google Fonts ------------------------------ */
+    @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+    /* ------------------------------ Google Fonts ------------------------------ */
+
+
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Quicksand', sans-serif;
+    }
+
+
+    /* ------------------------------ Root Elements ------------------------------ */
+    :root {
+        --light-theme: linear-gradient(320deg, #455b77 0%, #f5cdd4 74%);
+        --dark-theme: linear-gradient(#2c3e50 10%, #000 74%);
+    }
+
+    /* ------------------------------ Root Elements ------------------------------ */
+
+
+    /* ------------------------------ Body With Particles.js ------------------------------ */
+    body {
+        background: var(--light-theme);
+        background-attachment: fixed;
+        overflow: hidden;
+    }
+
+    #particles-js {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    body.dark {
+        background: var(--dark-theme);
+        color: #fff;
+        background-attachment: fixed;
+    }
+
+    /* ------------------------------ Body With Particles.js ------------------------------ */
+
+
+    /* ------------------------------ Dark Mode Toggler ------------------------------ */
+
+    #dark {
+        position: fixed;
+        bottom: 4%;
+        right: 2%;
+    }
+
+    .checkbox {
+        opacity: 0;
+        position: absolute;
+    }
+
+    .label {
+        width: 60px;
+        height: 18px;
+        background: var(--light-theme);
+        display: flex;
+        border-radius: 50px;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5px;
+        position: relative;
+        transform: scale(1.5);
+        cursor: pointer;
+    }
+
+    .ball {
+        width: 24px;
+        height: 24px;
+        background-color: white;
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        border-radius: 50%;
+        transition: transform 0.2s linear;
+    }
+
+    .moon,
+    .sun {
+        height: 18px;
+        margin: 2px;
+    }
+
+    .label.dark {
+        background: var(--dark-theme);
+    }
+
+    .checkbox:checked+.label .ball {
+        transform: translateX(40px);
+    }
+
+    /* ------------------------------ Dark Mode Toggler ------------------------------ */
+
+
+    /* ------------------------------ Navbar ------------------------------ */
+    nav h2 {
+        position: absolute;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        font-weight: 900;
+        text-transform: uppercase;
+        font-size: 29px;
+        margin-top: 10px;
+    }
+
+    #nav-head.dark {
+        border-bottom: none;
+    }
+
+    #sun-moon {
+        height: 30px;
+        margin-top: 4px;
+    }
+
+    #current-time {
+        position: absolute;
+        right: 7%;
+        top: 3%;
+        font-size: 25px;
+    }
+
+    /* ------------------------------ Navbar ------------------------------ */
+
+
+    /* ------------------------------ Input ------------------------------ */
+    form {
+        height: 35px;
+        width: 290px;
+        display: flex;
+        position: absolute;
+        top: 10%;
+        right: 1%;
+    }
+
+    button {
+        height: 35px;
+        width: 35px;
+        border-radius: 50%;
+        padding: 5px 10px;
+        border: none;
+        outline: 0.5px solid grey;
+        background: transparent;
+        font-size: 18px;
+        color: black;
+        cursor: pointer;
+        margin: 0 5px;
+    }
+
+    form input {
+        height: 100%;
+        width: 100%;
+        padding-left: 30px;
+        outline: 0.5px solid grey;
+        border: none;
+        font-size: 18px;
+        background: transparent;
+        color: black;
+        border-radius: 25px;
+        margin-right: 5px;
+        text-transform: capitalize;
+    }
+
+    form input::placeholder {
+        color: black;
+        font-size: medium;
+    }
+
+    form .fa-location-dot {
+        position: absolute;
+        color: black;
+        width: 35px;
+        line-height: 35px;
+        padding-left: 10px;
+    }
+
+    #input_city.dark {
+        color: white;
+    }
+
+    #input-button-1.dark {
+        color: white;
+        outline: white 1px solid;
+    }
+
+    #input_location.dark {
+        color: white;
+    }
+
+    /* ------------------------------ input ------------------------------ */
+
+
+    /* ------------------------------ Weather ------------------------------ */
+
+    #access {
+        font-size: 60px;
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    #mainDiv {
+        position: absolute;
+        width: 100%;
+        top: 20%;
+        display: flex;
+        flex-direction: column;
+        font-weight: bold;
+        align-items: center;
+    }
+
+    #city {
+        font-size: 55px;
+    }
+
+    #city_location {
+        font-size: 15px;
+        position: relative;
+        top: -35px;
+    }
+
+    #temp-f {
+        font-size: 45px;
+        font-weight: 600;
+    }
+
+    #condition {
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    .icondition {
+        display: flex;
+    }
+
+    #secondDiv {
+        position: absolute;
+        bottom: 15%;
+        height: auto;
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        padding: 0px 20px;
+    }
+
+    #feel,
+    #humidity,
+    #wind,
+    #visibility {
+        font-size: 27px;
+        font-weight: 600;
+        text-align: center;
+        padding: 0px 30px;
+    }
+
+    #real-title,
+    #humidity-title,
+    #visibility-title,
+    #wind-title {
+        font-size: 17px;
+        text-align: center;
+        font-weight: 600;
+        margin-top: 10px;
+    }
+
+
+    /* ------------------------------ Weather ------------------------------ */
